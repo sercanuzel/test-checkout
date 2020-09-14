@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MarketDBModelStoreContainer" CdmEntityContainer="MarketDBEntities">
+    <EntitySetMapping Name="C_CustomerBasket">
+      <EntityTypeMapping TypeName="MarketDBModel.C_CustomerBasket">
+        <MappingFragment StoreEntitySet="_CustomerBasket">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_Deals">
+      <EntityTypeMapping TypeName="MarketDBModel.C_Deals">
+        <MappingFragment StoreEntitySet="_Deals">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="DiscountAmountPercent" ColumnName="DiscountAmountPercent" />
+          <ScalarProperty Name="DiscountAmountPrice" ColumnName="DiscountAmountPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_Products">
+      <EntityTypeMapping TypeName="MarketDBModel.C_Products">
+        <MappingFragment StoreEntitySet="_Products">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MarketDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C_CustomerBasket">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="Int16" />
+    <Property Name="CustomerId" Type="Int16" />
+  </EntityType>
+  <EntityType Name="C_Deals">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Int32" />
+    <Property Name="DiscountAmountPercent" Type="Int32" />
+    <Property Name="DiscountAmountPrice" Type="Int32" />
+  </EntityType>
+  <EntityType Name="C_Products">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="MarketDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C_CustomerBasket" EntityType="Self.C_CustomerBasket" />
+    <EntitySet Name="C_Deals" EntityType="Self.C_Deals" />
+    <EntitySet Name="C_Products" EntityType="Self.C_Products" />
+  </EntityContainer>
+</Schema>
